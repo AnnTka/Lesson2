@@ -1,7 +1,13 @@
 # Создать список из отдельных символов, преобразовать в строку, инвертировать и  вывести на печать:
 
-list = ['s', 'l', 'i', 'k', 'S', 'e', 'M', 'h', 'c', 'a', 'e', 'T', '_', 'в', '_', 'ь', 'с', 'у', 'ч', 'у', '_', 'я']
+list = ['s', 'l', 'l', 'i', 'k', 'S', 'e', 'M', 'h', 'c', 'a', 'e', 'T']
 
-sentence = "".join(reversed(list))
+# sentence = "".join(reversed(list)) - мой вариант
 
-print(sentence)
+
+list = list[::-1]
+
+list_rev = "".join(list)
+# "".join(map(str, list)) - можно так
+
+print(list_rev)
