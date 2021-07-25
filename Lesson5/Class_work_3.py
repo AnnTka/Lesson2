@@ -3,17 +3,15 @@ import random
 
 def search_min_and_max(*args, **kwargs):
     func_type = kwargs["func_type"]
-    min_el = args[0]
-    max_el = args[0]
+    args_sum = 0
+    # if len(args) == 0:
+    #     return
+    max_el = 0  # Вместо 0 можно args[0] или is not None
     for element in args:
-        if element < min_el:
-            min_el = element
         if element > max_el:
             max_el = element
-    if func_type == "min":
-        return min_el
-    if func_type == "max":
-        return max_el
+        args_sum += element
+    return args_sum, max_el
 
 
 random_elements = []
